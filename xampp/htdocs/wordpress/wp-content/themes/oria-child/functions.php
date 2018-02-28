@@ -19,3 +19,24 @@ if( function_exists('register_sidebar')){
     ));
 
 }
+
+if( function_exists('register_sidebar')){
+
+    register_sidebar(array(
+        'name' => 'sidebar2',
+        'id' => 'new-widget-area2',
+        'before_widget' => '<div class="widget-sidebarentete2">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="titre-moduleentete2">',
+        'after_title' => '</div>',
+    ));
+
+}
+
+/*marge header top*/
+
+add_action('get_header', 'remove_admin_login_header');
+
+function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}

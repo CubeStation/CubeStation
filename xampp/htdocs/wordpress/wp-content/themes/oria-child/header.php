@@ -63,16 +63,24 @@ endif;
 
 		</div>
 		<div class="container">
-
-			<div class="site-branding">
-				<?php oria_branding(); ?>
+            <div class="containerentete">
+                <!-- ajout de ma nouvelle widget area 2 -->
+                <div class="widgetentete2">
+                    <?php if ( !function_exists("dynamic_sidebar") || !dynamic_sidebar("sidebar2") ) :?>
+                    <?php endif; ?>
+                </div>
+                <!-- fin nouvelle widget area 2 -->
+			    <div class="site-branding">
+				    <?php oria_branding(); ?>
+			    </div><!-- .site-branding -->
                 <!-- ajout de ma nouvelle widget area -->
                 <div class="widgetentete">
-                <?php if ( !function_exists("dynamic_sidebar") || !dynamic_sidebar("sidebar") ) :?>
-                <?php endif; ?>
+                    <?php if ( !function_exists("dynamic_sidebar") || !dynamic_sidebar("sidebar") ) :?>
+                    <?php endif; ?>
                 </div>
-                    <!-- fin nouvelle widget area -->
-			</div><!-- .site-branding -->
+                <!-- fin nouvelle widget area -->
+            </div>
+
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
